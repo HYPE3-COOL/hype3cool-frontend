@@ -1,0 +1,53 @@
+{
+  "profile": {
+    "username": "dao_codepath",
+    "displayName": "DCP | 8-Bit Oracle",
+    "avatarUrl": null,
+    "name": "ICONIC",
+    "presence": "WAVY",
+    "influence": "BASED",
+    "virality": "CHILL",
+    "synthmind": "ICONIC",
+    "aesthetics": "ULTRA",
+    "wavelength": "BASED",
+    "totalHypeScore": 87.5,
+    "rank": 42,
+    "hypeStatus": "ELEVATED",
+    "abilities": [
+      {
+        "name": "Hexagram Harmonizer",
+        "power": 92,
+        "description": "Decodes ancient wisdom into actionable digital insights, creating harmony between retro-tech aesthetics and modern innovation."
+      },
+      {
+        "name": "Synthwave Oracle",
+        "power": 88,
+        "description": "Channels the energy of the digital cosmos to provide creative guidance and philosophical clarity in a neon-soaked world."
+      },
+      {
+        "name": "Tech-Noir Alchemist",
+        "power": 85,
+        "description": "Blends technology, philosophy, and art to craft interdisciplinary creations that resonate deeply with digital wanderers."
+      },
+      {
+        "name": "Cultural Resonator",
+        "power": 80,
+        "description": "Amplifies cultural insights and provokes reflection, creating ripples of curiosity and engagement across the digital metropolis."
+      }
+    ],
+    "finishers": [
+      "Neon Hex Pulse",
+      "Retro-Tech Cascade",
+      "Philosophical Overdrive"
+    ],
+    "vaporTags": [
+      "Retro-Tech",
+      "Philosophy",
+      "DigitalArt",
+      "TechNoir",
+      "Synthwave"
+    ],
+    "description": "A digital sage navigating the neon-soaked streets of the hyperwave metropolis. Known as the '8-Bit Oracle,' DCP fuses retro-tech aesthetics with ancient wisdom, crafting interdisciplinary creations that provoke thought and inspire curiosity. Their presence is a beacon for those seeking depth in a world of surface-level noise.",
+    "personality": "Introspective, intellectual, and enigmatic, DCP thrives at the intersection of technology, philosophy, and creativity. Their thoughtful communication style and tech-noir vibe make them a digital luminary in the synthwave realm."
+  }
+}

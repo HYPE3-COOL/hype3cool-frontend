@@ -1,0 +1,205 @@
+/* Act as a border */
+.card-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem; /* equivalent to rounded-lg */
+}
+
+/* Gradient */
+.card-wrapper::before {
+    content: '';
+    background: conic-gradient(rgb(15, 255, 163) 0deg, rgb(6, 200, 246) 120deg, rgb(236, 132, 255) 240deg);
+    box-shadow:
+        0px 0.362px 0.652px -1px rgba(255, 255, 255, 0.02) inset,
+        0px 3px 5.4px -2px rgba(255, 255, 255, 0.04) inset;
+}
+
+/* Trigger animation on hover */
+.card-wrapper:hover::before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    height: 200%;
+    width: 200%;
+    animation: border-spin 5s linear infinite;
+    background: conic-gradient(rgb(15, 255, 163) 0deg, rgb(6, 200, 246) 120deg, rgb(236, 132, 255) 240deg);
+    animation-play-state: running;
+}
+
+/* Body */
+.card-content {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    border-radius: 7px;
+    background-color: black;
+}
+
+/* Keyframes for border spin animation */
+@keyframes border-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.thumbnail-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Gradient */
+.thumbnail-wrapper::before {
+    content: '';
+    background: conic-gradient(rgb(3, 225, 255) 0deg, rgb(6, 200, 246) 120deg, rgb(0, 0, 0) 240deg);
+    box-shadow:
+        0px 0.362px 0.652px -1px rgba(255, 255, 255, 0.02) inset,
+        0px 3px 5.4px -2px rgba(255, 255, 255, 0.04) inset;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    height: 200%;
+    width: 200%;
+    animation: border-spin 3s linear infinite;
+    background: conic-gradient(rgb(3, 225, 255) 0deg, rgb(6, 200, 246) 120deg, rgb(0, 0, 0) 240deg);
+    animation-play-state: running;
+}
+
+.thumbnail-content {
+    position: absolute;
+    left: 1.5px;
+    top: 1.5px;
+    height: calc(100% - 3px);
+    width: calc(100% - 3px);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.creator-card {
+    --offset: 0.5px;
+    position: relative;
+    background: black;
+    border-radius: 8px;
+    height: 75px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.creator-card::before {
+    content: '';
+    background: conic-gradient(rgb(3, 225, 255) 0deg, rgb(6, 200, 246) 120deg, rgb(0, 0, 0) 240deg);
+    /* background: conic-gradient(rgb(15, 255, 163) 0deg, rgb(6, 200, 246) 120deg, rgb(236, 132, 255) 240deg); */
+    /* animation: border-spin 5s linear infinite; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    animation: rotate 3s linear infinite;
+    /* height: 100%; */
+    transform: translate(-50%, -50%);
+    /* animation-play-state: running; */
+    aspect-ratio: 1;
+}
+
+.creator-card::after {
+    content: '';
+    background: inherit;
+    border-radius: inherit;
+    position: absolute;
+    inset: var(--offset);
+    height: calc(100% - 2 * var(--offset));
+    width: calc(100% - 2 * var(--offset));
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - var(--offset) * 2);
+    height: calc(100% - var(--offset) * 2);
+    background: black;
+    border-radius: 50px;
+    transform: translate(-50%, -50%); */
+}
+
+.creator-card > div {
+    background: transparent;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    padding: var(--offset);
+    /* position: absolute;
+    left: 1px;
+    top: 1px;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    border-radius: 7px;
+    background-color: black; */
+}
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+}
+
+.wrapper {
+    display: grid;
+    line-height: 1.5em;
+}
+
+.typing-demo {
+    width: 38ch;
+    animation:
+        typing 2s steps(38),
+        blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.agent-not-initialized {
+    width: 25ch;
+    animation:
+        typing 2s steps(25),
+        blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.analyze_to_start {
+    width: 19ch;
+    animation:
+        typing 2s steps(19),
+        blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.waiting-for-analysis {
+    width: 23ch;
+    animation:
+        typing 2s steps(23),
+        blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}

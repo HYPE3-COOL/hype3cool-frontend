@@ -1,0 +1,45 @@
+'use client';
+import React, { useState } from 'react';
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
+import TokenCreateByAddressForm from './TokenCreateByAddressForm';
+import TokenCreateByAgentForm from './TokenCreateByAgentForm';
+
+const tabs = [
+    {
+        name: 'By Agent',
+    },
+    {
+        name: 'By Address',
+    },
+];
+
+const TokenCreateSection = () => {
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+    return (
+        <div className="relative py-[80px]">
+            <TabGroup>
+                <TabList className="flex flex-row  w-full h-[30px] lg:h-[48px] mb-10">
+                    {tabs.map((tab, index) => (
+                        <Tab
+                            key={index}
+                            className="flex-grow lg:flex-grow-0 flex items-center justify-center gap-3 px-3 md:px-4 font-figtree leading-snug tracking-tight text-sm md:text-base lg:text-lg font-semibold text-white/40 hover:text-blue-200 outline-none border-none bg-transparent data-[selected]:text-blue-200 data-[selected]:font-bold lg:data-[selected]:font-semibold"
+                        >
+                            {tab.name}
+                        </Tab>
+                    ))}
+                </TabList>
+                <TabPanels>
+                    <TabPanel className="tab-panel-1">
+                        <TokenCreateByAgentForm />
+                    </TabPanel>
+                    <TabPanel className="tab-panel-2">
+                        <TokenCreateByAddressForm />
+                    </TabPanel>
+                </TabPanels>
+            </TabGroup>
+        </div>
+    );
+};
+
+export default TokenCreateSection;
